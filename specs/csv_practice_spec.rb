@@ -100,13 +100,22 @@ describe 'CSV Practice Methods' do
       total_crimes = total_crimes_per_district(data)
 
       # Act
-      save_data(total_crimes)
+      save_data('data/total_crimes.csv', total_crimes)
 
       # Assert
       expect(File.exist?('data/total_crimes.csv')).must_equal true
     end
 
     it 'The file contains the right entries and headers' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      total_crimes = total_crimes_per_district(data)
+
+      # Act
+      save_data('data/total_crimes.csv', total_crimes)
+
+      # Assert
+
       CSV.read('data/total_crimes.csv', headers: true) do |line|
         correct_totals.keys.each do |key|
           expect(line[key]).must_equal correct_totals[key]
