@@ -100,17 +100,54 @@ describe 'CSV Practice Methods' do
       total_crimes = total_crimes_per_district(data)
 
       # Act
-      save_data(total_crimes)
+      save_crime_totals('data/total_crimes.csv', total_crimes)
 
       # Assert
       expect(File.exist?('data/total_crimes.csv')).must_equal true
     end
 
     it 'The file contains the right entries and headers' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      total_crimes = total_crimes_per_district(data)
+
+      # Act
+      save_crime_totals('data/total_crimes.csv', total_crimes)
+
+      # Assert
       CSV.read('data/total_crimes.csv', headers: true) do |line|
         correct_totals.keys.each do |key|
           expect(line[key]).must_equal correct_totals[key]
         end
+      end
+    end
+  end
+
+  describe 'all_burglary_crimes' do
+    it 'returns an array of hashes' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+
+      # Act
+      burglaries = all_burglary_crimes(data)
+
+      # Assert
+      expect(burglaries.class).must_equal Array
+      burglaries.each do |crime|
+        expect(crime.class).must_equal Hash
+      end
+    end
+
+    it 'contains only crimes with the word `burglary` in the description' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+
+      # Act
+      burglaries = all_burglary_crimes(data)
+
+      # Assert
+      burglaries.each do |crime|
+        expect(crime['crimedescr'].upcase.include? 'BURGLARY').must_equal true
       end
     end
   end

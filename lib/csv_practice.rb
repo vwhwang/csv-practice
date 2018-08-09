@@ -25,13 +25,35 @@ def total_crimes_per_district(data)
   return totals
 end
 
-def save_crime_totals(crime_totals)
-  if array_of_hashes.length.zero?
-    raise ArgumentError, 'Must have a nonempty array'
-  end
-  CSV.open('data/total_crimes.csv', 'w',
+def save_crime_totals(filename, crime_totals)
+  CSV.open(filename, 'w',
            write_headers: true,
            headers: crime_totals.keys) do |csv|
     csv << crime_totals
   end
+end
+
+
+# Part 2 - More Enumerable Practice
+
+def all_burglary_crimes(crime_data)
+  return crime_data.select do |crime|
+    crime['crimedescr'].downcase.include? 'burglary'
+  end
+end
+
+def crimes_sorted_by_date(crime_data)
+
+end
+
+def district_with_most_crime(crime_data)
+
+end
+
+def district_with_least_crime(crime_data)
+
+end
+
+def crime_coordinates(crime_data)
+
 end
