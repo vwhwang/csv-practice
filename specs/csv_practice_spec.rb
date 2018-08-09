@@ -151,4 +151,66 @@ describe 'CSV Practice Methods' do
       end
     end
   end
+
+  describe 'crimes_sorted_by_date' do
+    it 'orders all the crime reports' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+
+      # Act
+      ordered_crimes = crimes_sorted_by_date(data)
+
+      # Assert
+      last_crime = DateTime.strptime('1/1/00', '%m/%d/%Y')
+      ordered_crimes.each do |crime|
+        crime_date = DateTime.strptime(crime['cdatetime'], '%m/%d/%Y %H:%M')
+        expect(crime_date >= last_crime).must_equal true
+
+        last_crime = crime_date
+      end
+    end
+  end
+
+  describe 'district_with_most_crime' do
+    it 'returns the right value' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+
+      # Act
+      high_crime_district = district_with_most_crime(data)
+
+      # Assert
+      expect(high_crime_district).must_equal '3'
+    end
+  end
+
+  describe 'district_with_least_crime' do
+    it 'returns the right value' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+
+      # Act
+      high_crime_district = district_with_least_crime(data)
+
+      # Assert
+      expect(high_crime_district).must_equal '1'
+    end
+  end
+
+  describe 'crime_coordinates' do
+    it 'returns an array of 2-element arrays' do
+      # Arrange
+      data = load_data('data/SacramentocrimeJanuary2006.csv')
+
+      # Act
+      coordinates = crime_coordinates(data)
+
+      # Assert
+      expect(coordinates.class).must_equal Array
+      coordinates.each do |coordinate|
+        expect(coordinate.class).must_equal Array
+        expect(coordinate.length).must_equal 2
+      end
+    end
+  end
 end

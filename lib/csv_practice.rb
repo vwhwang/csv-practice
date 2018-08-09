@@ -1,6 +1,7 @@
 # csv_practice.rb
 require 'csv'
 require 'awesome_print'
+require 'date'
 
 
 def load_data(filename)
@@ -43,17 +44,27 @@ def all_burglary_crimes(crime_data)
 end
 
 def crimes_sorted_by_date(crime_data)
-
+  crime_data.sort_by do |crime|
+    DateTime.strptime(crime['cdatetime'], '%m/%d/%Y %H:%M')
+  end
 end
 
 def district_with_most_crime(crime_data)
-
+  totals = total_crimes_per_district(crime_data)
+  return totals.keys.max_by do |key|
+    totals[key].to_i
+  end
 end
 
 def district_with_least_crime(crime_data)
-
+  totals = total_crimes_per_district(crime_data)
+  return totals.keys.min_by do |key|
+    totals[key].to_i
+  end
 end
 
 def crime_coordinates(crime_data)
-
+  crime_data.map do |crime|
+    [crime['latitude'], crime['longitude']]
+  end
 end
