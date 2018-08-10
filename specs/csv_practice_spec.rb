@@ -14,13 +14,13 @@ describe 'CSV Practice Methods' do
   describe 'load_data' do
     it 'returns an array of hashes' do
       # Arrange & Act
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
 
       # Assert
       expect(data.class).must_equal Array
       data.each do |data_row|
         expect(data_row.class).must_equal Hash
-        expected_keys = %w[cdatetime address district beat grid crimedescr latitude longitude]
+        expected_keys = %w[ID Name Sex Age Height Weight Team NOC Games Year Season City Sport Event Medal]
 
         expected_keys.each do |key|
           expect(data_row.key?(key)).must_equal true
@@ -30,7 +30,7 @@ describe 'CSV Practice Methods' do
 
     it 'has the proper number of rows' do
       # Arrange & Act
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
 
       # Assert
       expect(data.length).must_equal 7584
@@ -38,7 +38,7 @@ describe 'CSV Practice Methods' do
 
     it 'has the right 1st row' do
       # Arrange & Act
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
 
       # Assert
       expect(data.first['cdatetime']).must_equal '1/18/06 4:40'
@@ -48,7 +48,7 @@ describe 'CSV Practice Methods' do
 
     it 'has the right last row' do
       # Arrange & Act
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
 
       # Assert
       expect(data.last['cdatetime']).must_equal '1/9/06 9:30'
@@ -69,7 +69,7 @@ describe 'CSV Practice Methods' do
 
     it 'should return a hash' do
       # Arrange
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
 
       # Act
       total_crimes = total_crimes_per_district(data)
@@ -80,7 +80,7 @@ describe 'CSV Practice Methods' do
 
     it 'should calculate the proper totals' do
       # Arrange
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
 
       # Act
       total_crimes = total_crimes_per_district(data)
@@ -96,7 +96,7 @@ describe 'CSV Practice Methods' do
   describe 'Can create a total crimes file' do
     it 'The file is created' do
       # Arrange
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
       total_crimes = total_crimes_per_district(data)
 
       # Act
@@ -108,7 +108,7 @@ describe 'CSV Practice Methods' do
 
     it 'The file contains the right entries and headers' do
       # Arrange
-      data = load_data('data/SacramentocrimeJanuary2006.csv')
+      data = load_data('data/athlete_events.csv')
       total_crimes = total_crimes_per_district(data)
 
       # Act
