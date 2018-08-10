@@ -6,32 +6,28 @@ def load_data(filename)
 
 end
 
-def total_crimes_per_district(data)
+def total_medals_per_country(olympic_data)
 
 end
 
-def save_crime_totals(crime_totals)
+def save_medal_totals(filename, medal_totals)
 
 end
 
 # Part 2 - More Enumerable Practice
 
-def all_burglary_crimes(crime_data)
+def all_gold_medal_winners(olympic_data)
 
 end
 
-def crimes_sorted_by_date(crime_data)
+def metals_sorted_by_country(metal_totals)
 
 end
 
-def district_with_most_crime(crime_data)
+def country_with_most_metals(metal_totals)
 
 end
 
-def district_with_least_crime(crime_data)
-
-end
-
-def crime_coordinates(crime_data)
+def athlete_height_in_inches(olympic_data)
 
 end
