@@ -1,5 +1,6 @@
 # csv_practice.rb
 require 'csv'
+require 'awesome_print'
 
 # Part 1 - CSV Practice
 def load_data(filename)
