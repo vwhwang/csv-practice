@@ -13,58 +13,28 @@ def load_data(filename)
   return data
 end
 
-def total_crimes_per_district(data)
-  totals = {}
+def total_medals_per_country(olympic_data)
 
-  data.each do |entry|
-    if totals[entry['district']]
-      totals[entry['district']] += 1
-    else
-      totals[entry['district']] = 1
-    end
-  end
-  return totals
 end
 
-def save_crime_totals(filename, crime_totals)
-  CSV.open(filename, 'w',
-           write_headers: true,
-           headers: crime_totals.keys) do |csv|
-    csv << crime_totals
-  end
-end
+def save_medal_totals(filename, medal_totals)
 
+end
 
 # Part 2 - More Enumerable Practice
 
-def all_burglary_crimes(crime_data)
-  return crime_data.select do |crime|
-    crime['crimedescr'].downcase.include? 'burglary'
-  end
+def all_gold_medal_winners(olympic_data)
+
 end
 
-def crimes_sorted_by_date(crime_data)
-  crime_data.sort_by do |crime|
-    DateTime.strptime(crime['cdatetime'], '%m/%d/%Y %H:%M')
-  end
+def metals_sorted_by_country(metal_totals)
+
 end
 
-def district_with_most_crime(crime_data)
-  totals = total_crimes_per_district(crime_data)
-  return totals.keys.max_by do |key|
-    totals[key].to_i
-  end
+def country_with_most_metals(metal_totals)
+
 end
 
-def district_with_least_crime(crime_data)
-  totals = total_crimes_per_district(crime_data)
-  return totals.keys.min_by do |key|
-    totals[key].to_i
-  end
-end
+def athlete_height_in_inches(olympic_data)
 
-def crime_coordinates(crime_data)
-  crime_data.map do |crime|
-    [crime['latitude'], crime['longitude']]
-  end
 end
