@@ -1,6 +1,6 @@
 # CSV & Enumerables Practice
 
-In this exercise you are asked to process a CSV file with Olympic Games data.  This exercise has two parts.  The first allowing you to practice reading in data from a CSV file, processing it and writing the results back to a file.  The second involves using Enumerable methods to manipulate the data from the file.
+In this exercise you are asked to process a CSV file with Olympic Games data.  This exercise has two parts.  In the first part you will practice reading in data from a CSV file, processing it and writing the results back to a file.  The second involves using Enumerable methods to manipulate the data from the file.
 
 ## Part 1:
 
