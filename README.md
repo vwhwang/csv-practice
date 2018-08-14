@@ -13,9 +13,9 @@ In part one you are asked to create 3 methods and you will need to complete them
 
 In part 2 you will create methods to manipulate the data read in from the file.  You should think carefully and use an Enumerable method to help you complete the method.
 
--   `all_gold_medal_winners(olympic_data)` - This method returns an array the names of all Gold metal winners.
--   `metals_sorted_by_country(metal_totals)`  - This method takes a list of countries and their metal totals and returns the same list, sorted by country
--    `country_with_most_metals(metal_totals)` - This method returns the country with the highest number of metals.
+-   `all_gold_medal_winners(olympic_data)` - This method returns an array the names of all Gold medal winners.
+-   `medals_sorted_by_country(medal_totals)`  - This method takes a list of countries and their medal totals and returns the same list, sorted by country
+-    `country_with_most_medals(medal_totals)` - This method returns the country with the highest number of medals.
 -    `athlete_height_in_inches(olympic_data)` - This method takes an array of hashes listing all the olympic data and returns a similar list, but with the athlete height in inches instead of centimeters.
 
 
