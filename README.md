@@ -9,6 +9,8 @@ In part one you are asked to create 3 methods and you will need to complete them
 -   `total_medals_per_country(olympic_data)`  - This method takes the array of hashes read in from the file in `load_data` and returns an array of hashes with each element having a country name (team), and number of medals that country (team) has won.
 -   `save_medal_totals(filename, medal_totals)` - This method writes the medal total information returned from `total_medals_per_country` to another CSV file provided by `filename`.
 
+There are a number of tests written to verify the correctness of your methods and you can gain insight into the expected structure of the method return values by examining the spec file.
+
 ## Part 2:
 
 In part 2 you will create methods to manipulate the data read in from the file.  You should think carefully and use an Enumerable method to help you complete the method.
