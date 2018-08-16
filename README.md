@@ -25,4 +25,4 @@ In part 2 you will create methods to manipulate the data read in from the file. 
 
 If you want additional practice consider:
 - Writing the results of the methods from Part 2 to CSV files
-- Writing tests for the methods in Part 2
+- Writing tests for the methods in Part 2, remember to check all edge-cases.
