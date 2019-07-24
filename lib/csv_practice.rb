@@ -1,4 +1,7 @@
 # csv_practice.rb
+
+# irb -r ./csv_practice.rb
+
 require 'csv'
 require 'awesome_print'
 
