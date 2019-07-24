@@ -165,7 +165,7 @@ describe 'CSV Practice Methods' do
       # Assert
       last_medal = sorted_medal_list.first
       sorted_medal_list.each do |current_entry|
-        expect(last_medal[:country] <= current_entry[:country]).must_equal true
+        expect(last_medal["country"] <= current_entry["country"]).must_equal true
 
         last_medal = current_entry
       end
@@ -184,7 +184,7 @@ describe 'CSV Practice Methods' do
       most_medals = country_with_most_medals(medal_totals)
 
       # Assert
-      expect(most_medals[:country]).must_equal 'United States'
+      expect(most_medals["country"]).must_equal 'United States'
     end
   end
 
