@@ -1,10 +1,12 @@
 # csv_practice_spec.rb
 
+
 require 'minitest'
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require 'minitest/pride'
+require 'awesome_print'
 
 require_relative '../lib/csv_practice'
 
@@ -32,6 +34,7 @@ describe 'CSV Practice Methods' do
     end
 
     it 'has the proper number of rows' do
+
       # Arrange & Act
       data = load_data(OLYMPIC_DATA_FILENAME)
 
@@ -77,11 +80,10 @@ describe 'CSV Practice Methods' do
       expect(total_medals).must_be_instance_of Array
       correct_totals.keys.each do |country|
         country_total = total_medals.find do |medal_total|
-          puts "medal_total: #{medal_total}"
-          medal_total[:country] == country
+          medal_total["country"] == country
         end
 
-        expect(country_total[:total_medals]).must_equal correct_totals[country]
+      expect(country_total["count"]).must_equal correct_totals[country]
       end
     end
   end
