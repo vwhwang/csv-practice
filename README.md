@@ -28,9 +28,9 @@ There are a number of tests written to verify the correctness of your methods an
 
 In part 2 you will create methods to manipulate the data read in from the file.  You should think carefully and use an Enumerable method to help you complete the method.
 
--   `all_gold_medal_winners(olympic_data)` - This method returns an array the names of all Gold medal winners.  This method takes as input the data returned by the `load_data` method.
+-   `all_gold_medal_winners(olympic_data)` - This method takes as input the data returned by the `load_data` method. This method returns an array of hashes, each containing all the same data as the input but containing only Gold medal winners.  
 -   `medals_sorted_by_country(medal_totals)`  - This method takes a list of countries and their medal totals and returns the same list, sorted by country.  This method takes as input the result of the `total_medals_per_country` method.
--    `country_with_most_medals(medal_totals)` - This method returns the country with the highest number of medals.  This method takes as input the result of the `total_medals_per_country` method.
+-    `country_with_most_medals(medal_totals)` - This method returns a hash corresponding to the country with the highest number of medals.  This method takes as input the result of the `total_medals_per_country` method.
 -    `athlete_height_in_inches(olympic_data)` - This method takes an array of hashes listing all the olympic data and returns a similar list, but with the athlete height in inches instead of centimeters.  This method takes as input the data returned by the `load_data` method.
 
 
