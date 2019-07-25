@@ -24,6 +24,8 @@ For example, you should return a hash that looks like this:
 
 There are a number of tests written to verify the correctness of your methods and you can gain insight into the expected structure of the method return values by examining the spec file.
 
+Note: For this exercise, use strings for hash keys (not symbols).
+
 ## Part 2:
 
 In part 2 you will create methods to manipulate the data read in from the file.  You should think carefully and use an Enumerable method to help you complete the method.
