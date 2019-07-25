@@ -1,12 +1,10 @@
 # csv_practice_spec.rb
 
-
 require 'minitest'
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require 'minitest/pride'
-require 'awesome_print'
 
 require_relative '../lib/csv_practice'
 
@@ -34,7 +32,6 @@ describe 'CSV Practice Methods' do
     end
 
     it 'has the proper number of rows' do
-
       # Arrange & Act
       data = load_data(OLYMPIC_DATA_FILENAME)
 
