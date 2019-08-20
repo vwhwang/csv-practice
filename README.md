@@ -9,13 +9,13 @@ In part one you are asked to create 3 methods and you will need to complete them
 -   `load_data(filename)` - This method takes a file name and returns the data from the file as an array of Hashes.
 -   `total_medals_per_country(olympic_data)`  - This method takes the array of hashes read in from the file in `load_data` and returns an array of hashes with each element having a country name (team), and number of medals that country (team) has won.
 
-For example, you should return a hash that looks like this:
+For example, you should return an array of hashes that looks like this:
 
 ```ruby
 [
-    {"country"=>"Norway", "count"=>0}
-    {"country"=>"Estonia", "count"=>0}
-    {"country"=>"Spain", "count"=>0} 
+    {"country"=>"Norway", "count"=>133}
+    {"country"=>"Estonia", "count"=>10}
+    {"country"=>"Spain", "count"=>174} 
     ...
 ]
 ```
