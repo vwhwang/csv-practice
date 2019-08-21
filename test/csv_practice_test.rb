@@ -54,19 +54,21 @@ describe 'CSV Practice Methods' do
   end
 
   describe 'total_medals_per_country' do
-    # Arrange
-    data = load_data(OLYMPIC_DATA_FILENAME)
+    before do
+      # Arrange
+      data = load_data(OLYMPIC_DATA_FILENAME)
 
-    correct_totals = {
-      'Norway' => 133,
-      'United States' => 944,
-      'Canada' => 321,
-      'Russia' => 470,
-      'China' => 423,
-      'Bahrain' => 3,
-      'Jamaica' => 69,
-      'United Arab Emirates' => 1
-    }
+      correct_totals = {
+        'Norway' => 133,
+        'United States' => 944,
+        'Canada' => 321,
+        'Russia' => 470,
+        'China' => 423,
+        'Bahrain' => 3,
+        'Jamaica' => 69,
+        'United Arab Emirates' => 1
+      }
+    end
 
     it 'should return an array of hashes' do
 
@@ -116,11 +118,13 @@ describe 'CSV Practice Methods' do
   end
 
   describe 'All Gold Medal Winners' do
-    # Arrange
-    data = load_data(OLYMPIC_DATA_FILENAME)
+    before do
+      # Arrange
+      data = load_data(OLYMPIC_DATA_FILENAME)
 
-    # Act
-    gold_medal_winners = all_gold_medal_winners(data)
+      # Act
+      gold_medal_winners = all_gold_medal_winners(data)
+    end
 
     it 'returns an array of hashes' do
 
