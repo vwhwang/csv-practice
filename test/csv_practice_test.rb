@@ -77,10 +77,10 @@ describe 'CSV Practice Methods' do
       expect(total_medals).must_be_instance_of Array
       correct_totals.keys.each do |country|
         country_total = total_medals.find do |medal_total|
-          medal_total["country"] == country
+          medal_total[:country] == country
         end
 
-      expect(country_total["count"]).must_equal correct_totals[country]
+        expect(country_total[:count]).must_equal correct_totals[country]
       end
     end
   end
@@ -153,7 +153,7 @@ describe 'CSV Practice Methods' do
       medal_totals = total_medals_per_country(data)
 
       # Act
-       sorted_medal_list = medals_sorted_by_country(medal_totals)
+      sorted_medal_list = medals_sorted_by_country(medal_totals)
 
       # Assert
       last_medal = sorted_medal_list.first
