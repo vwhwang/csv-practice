@@ -21,11 +21,11 @@ def all_gold_medal_winners(olympic_data)
 
 end
 
-def metals_sorted_by_country(metal_totals)
+def medals_sorted_by_country(medal_totals)
 
 end
 
-def country_with_most_metals(metal_totals)
+def country_with_most_medals(medal_totals)
 
 end
 
