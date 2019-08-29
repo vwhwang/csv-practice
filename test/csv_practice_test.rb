@@ -1,4 +1,4 @@
-# csv_practice_spec.rb
+# csv_practice_test.rb
 
 require 'minitest'
 require 'minitest/spec'

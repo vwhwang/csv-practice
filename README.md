@@ -22,7 +22,7 @@ For example, you should return an array of hashes that looks like this:
 
 -   `save_medal_totals(filename, medal_totals)` - This method writes the medal total information returned from `total_medals_per_country` to another CSV file provided by `filename`.
 
-There are a number of tests written to verify the correctness of your methods and you can gain insight into the expected structure of the method return values by examining the spec file.
+There are a number of tests written to verify the correctness of your methods and you can gain insight into the expected structure of the method return values by examining the test file.
 
 Note: For this exercise, use strings for hash keys (not symbols).
 
