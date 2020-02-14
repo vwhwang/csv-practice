@@ -6,11 +6,12 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 require 'minitest/pride'
 require 'pry'
+require 'minitest/skip_dsl'
 
 require_relative '../lib/csv_practice'
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
-
+# ID,Name,Sex,Age,Height,Weight,Team,NOC,Games,Year,Season,City,Sport,Event,Medal
 REQUIRED_OLYMPIAN_FIELDS = %w[ID Name Height Team Year City Sport Event Medal]
 MEDAL_TOTALS_FILENAME = 'data/medal_totals.csv'
 OLYMPIC_DATA_FILENAME = 'data/athlete_events.csv'
