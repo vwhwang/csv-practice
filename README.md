@@ -24,7 +24,7 @@ This method's responsibility is to:
   - take in a `filename` as a parameter. This should be a string, representing a relative path to a CSV file containing Olympic medalist data.
   - return an array of Olympic medalists that is described in a given file.
     - Each Olympic medalist (each element in the array) is a hash.
-    - Each Olympic medalist hash should have only the following keys:
+    - Each Olympic medalist hash should have only the following keys (Notice: this is not all of the keys in the CSV file):
         - "ID"
         - "Name"
         - "Height"
@@ -46,8 +46,6 @@ This method's responsibility is to:
 (In other words, given the tests have already been written for you, write the method to get all tests to pass.)
 
     `When calling CSV.read, consider what the relative path of the csv file from the file the code is in`
-    
-    `You will need to use the to_h syntax referenced [here](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/csv-as-a-database.md#bonus-syntax-csvread-and-forcing-csvtable-to-be-an-array)`
 
 ### `total_medals_per_team(olympic_data)`
 
