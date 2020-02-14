@@ -1,34 +1,13 @@
-# csv_practice.rb
 require 'csv'
 require 'awesome_print'
 
-# Part 1 - CSV Practice
-def load_data(filename)
+def get_all_olympic_athletes(filename)
 
 end
 
-def total_medals_per_country(olympic_data)
+def total_medals_per_team(olympic_data)
 
 end
 
-def save_medal_totals(filename, medal_totals)
-
-end
-
-# Part 2 - More Enumerable Practice
-
-def all_gold_medal_winners(olympic_data)
-
-end
-
-def medals_sorted_by_country(medal_totals)
-
-end
-
-def country_with_most_medals(medal_totals)
-
-end
-
-def athlete_height_in_inches(olympic_data)
-
+def get_all_gold_medalists(olympic_data)
 end
